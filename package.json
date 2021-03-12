@@ -1,11 +1,12 @@
 {
   "name": "google-home-friday-road-show",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main.js",
   "repository": "ssh://git@github.com/reireias/google-home-friday-road-show",
   "author": "reireias <reireias@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/main.js",
     "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "devDependencies": {
