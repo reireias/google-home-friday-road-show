@@ -1,0 +1,8 @@
+{
+  "name": "google-home-friday-road-show",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/reireias/google-home-friday-road-show",
+  "author": "reireias <reireias@gmail.com>",
+  "license": "MIT"
+}
