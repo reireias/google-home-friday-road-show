@@ -1,10 +1,29 @@
 const axios = require('axios')
 
-const SEARCH_URL =
-  'https://tv.yahoo.co.jp/search?q=%E9%87%91%E6%9B%9C+%E3%83%AD%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC'
+const SEARCH_URL = 'https://tv.yahoo.co.jp/api/adapter'
 
 const search = async () => {
-  await axios.get(SEARCH_URL)
+  const params = {
+    query: '金曜ロードショー',
+    siTypeId: '1 3',
+    majorGenreId: '',
+    areaId: '23',
+    duration: '',
+    element: '',
+    start: 0,
+    result: 10,
+    sort: '+broadCastStartDate',
+  }
+  const headers = {
+    authority: 'tv.yahoo.co.jp',
+    'target-path': '/TVWebService/V2/contents',
+    'target-api': 'mindsSiQuery',
+  }
+  const res = await axios.post(SEARCH_URL, params, { headers })
+  for (const item of res.data.ResultSet.Result) {
+    console.log(item.title)
+  }
+
   return 'dummy'
 }
 
