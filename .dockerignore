@@ -118,3 +118,13 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 .envrc
+.github/
+.eslintrc.js
+.gitignore
+.prettierrc.yml
+.tool-versions
+Dockerfile
+jest.config.js
+LICENSE
+README.md
+test/
